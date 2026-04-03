@@ -30,11 +30,8 @@ jobs:
       - name: Install Chrome
         uses: browser-actions/setup-chrome@v1
 
-      - name: Run test_homepage_form
-        run: pytest Tests/test_homepage_form.py -v
-
-      - name: Run test_register
-        run: pytest Tests/test_register.py -v
+      - name: Run Tests
+        run: pytest Tests/test_homepage_form.py Tests/test_register.py -v
 
       - name: Upload Logs
         if: always()
