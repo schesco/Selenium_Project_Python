@@ -10,6 +10,9 @@ jobs:
   test:
     runs-on: ubuntu-latest
 
+    env:
+      PYTHONPATH: ${{ github.workspace }}/SeleniumReview_Pom_structure
+
     steps:
       - name: Checkout Code
         uses: actions/checkout@v3
@@ -27,12 +30,15 @@ jobs:
       - name: Install Chrome
         uses: browser-actions/setup-chrome@v1
 
-      - name: Run Tests
-        run: pytest Tests/test_homepage_form.py Tests/test_register.py -v
+      - name: Run test_homepage_form
+        run: pytest Tests/test_homepage_form.py -v
+
+      - name: Run test_register
+        run: pytest Tests/test_register.py -v
 
       - name: Upload Logs
         if: always()
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v3
         with:
           name: logs
-          path: test.log
+          path: .
