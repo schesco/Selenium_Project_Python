@@ -1,8 +1,8 @@
 
 
 
-from SeleniumReview_Pom_structure.Pages.rahulshettyacademy_client_register import RegisterPage
-from SeleniumReview_Pom_structure.Utilities.BaseClass import BaseClass
+from Pages.rahulshettyacademy_client_register import RegisterPage
+from Utilities.BaseClass import BaseClass
 
 
 class TestClientRegisterPage(BaseClass):

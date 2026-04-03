@@ -1,5 +1,3 @@
-import logging
-from time import sleep
 
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import Select, WebDriverWait
@@ -11,7 +9,7 @@ class ConfirmPage:
 
     def __init__(self, driver):
         self.driver = driver
-        self.wait = WebDriverWait(driver, 4)
+        self.wait = WebDriverWait(driver, 10)
         #self.log = logging.getLogger(__name__)
         #self.driver.find_element(By.CSS_SELECTOR, "ul li a[href='/angularpractice/shop']").click()
 
@@ -53,5 +51,9 @@ class ConfirmPage:
         pass
 
     def Check_out(self):
-        self.driver.find_element(*ConfirmPage.Checkout).click()
+        check = self.wait.until(
+            EC.element_to_be_clickable(ConfirmPage.Checkout)
+        )
+        check.click()
+        #self.driver.find_element().click()
         pass

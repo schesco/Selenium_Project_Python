@@ -1,13 +1,15 @@
 import logging
 from time import sleep
-
 from selenium.webdriver.common.by import By
+from selenium.webdriver.support.ui import Select, WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
 
 
 class ShopPage:
 
     def __init__(self, driver):
         self.driver = driver
+        self.wait = WebDriverWait(driver, 10)
 
     # CSSLocators
     Shop_button = (By.CSS_SELECTOR, "ul li a[href='/angularpractice/shop']")
@@ -33,7 +35,11 @@ class ShopPage:
 
 
     def CheckOut(self):
-        self.driver.find_element(*ShopPage.Checkout_Button).click()
+        check = self.wait.until(
+            EC.element_to_be_clickable(ShopPage.Checkout_Button)
+        )
+        check.click()
+
         print("hallo checkout")
 
 

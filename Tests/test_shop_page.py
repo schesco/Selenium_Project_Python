@@ -1,7 +1,7 @@
 from time import sleep
-from SeleniumReview_Pom_structure.Pages.rahulshettyacademy_angulare_shop import ShopPage
-from SeleniumReview_Pom_structure.Tests.test_confirm_page import TestConfirmPage
-from SeleniumReview_Pom_structure.Utilities.BaseClass import BaseClass
+from Pages.rahulshettyacademy_angulare_shop import ShopPage
+from Tests.test_confirm_page import TestConfirmPage
+from Utilities.BaseClass import BaseClass
 
 class TestShopPage(BaseClass):
     #@pytest.mark.xfail

@@ -1,6 +1,6 @@
 from time import sleep
-from SeleniumReview_Pom_structure.Pages.rahulshettyacademy_final_tabs import PurchasePage
-from SeleniumReview_Pom_structure.Utilities.BaseClass import BaseClass
+from Pages.rahulshettyacademy_final_tabs import PurchasePage
+from Utilities.BaseClass import BaseClass
 
 class TestPurchasePage(BaseClass):
     #@pytest.mark.xfail

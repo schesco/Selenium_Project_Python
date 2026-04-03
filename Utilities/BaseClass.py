@@ -10,12 +10,9 @@ class BaseClass:
 
     @pytest.fixture
     def setup(self):
-        options = Options()
-        options.add_argument("--headless")
-        options.add_argument("--no-sandbox")
-        options.add_argument("--disable-dev-shm-usage")
+
         service = Service(ChromeDriverManager().install())
-        driver = webdriver.Chrome(service=service,options=options)
+        driver = webdriver.Chrome(service=service)
         driver.maximize_window()
         yield driver
         driver.quit()
