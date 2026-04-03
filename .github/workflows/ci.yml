@@ -31,4 +31,4 @@ jobs:
         uses: browser-actions/setup-chrome@v1
 
       - name: Run only homepage form test
-        run: pytest Tests/test_homepage_form.py -v
+        run: pytest Tests/test_all_page_workflow.py -v
