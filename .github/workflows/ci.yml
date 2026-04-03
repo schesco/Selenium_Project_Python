@@ -11,7 +11,7 @@ jobs:
     runs-on: ubuntu-latest
 
     env:
-      PYTHONPATH: ${{ github.workspace }}
+      PYTHONPATH: ${{ github.workspace }}/Selenium_Project_Python
 
     steps:
       - name: Checkout Code
@@ -33,4 +33,3 @@ jobs:
       - name: Run Tests
         working-directory: ${{ github.workspace }}/Selenium_Project_Python
         run: pytest Tests/test_homepage_form.py -v
-
