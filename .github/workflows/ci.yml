@@ -11,7 +11,7 @@ jobs:
     runs-on: ubuntu-latest
 
     env:
-      PYTHONPATH: ${{ github.workspace }}/Selenium_Project_Python
+      PYTHONPATH: ${{ github.workspace }}
 
     steps:
       - name: Checkout Code
