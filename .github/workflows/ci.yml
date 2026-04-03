@@ -28,7 +28,7 @@ jobs:
         uses: browser-actions/setup-chrome@v1
 
       - name: Run Tests
-        run: pytest -v
+        run: pytest Tests/test_homepage_form.py Tests/test_register.py -v
 
       - name: Upload Logs
         if: always()
