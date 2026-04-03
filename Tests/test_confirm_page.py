@@ -4,7 +4,6 @@ from Pages.rahulshettyacademy_angular_confirm import ConfirmPage
 from Utilities.BaseClass import BaseClass
 
 class TestConfirmPage(BaseClass):
-    #@pytest.mark.xfail
     def testConfirmInput(self, setup):
         driver = setup
 

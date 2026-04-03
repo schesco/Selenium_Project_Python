@@ -4,10 +4,9 @@ from Tests.test_confirm_page import TestConfirmPage
 from Utilities.BaseClass import BaseClass
 
 class TestShopPage(BaseClass):
-    #@pytest.mark.xfail
     def testShopInput(self, setup):
         driver = setup
-        #driver.get("https://rahulshettyacademy.com/angularpractice/")
+
 
 
         Shop = ShopPage(driver)

@@ -1,13 +1,12 @@
 from time import sleep
-import pytest
-from unittest import expectedFailure
+
 from Pages.rahulshettyacademy_angulare_home import HomePage
 from Utilities.BaseClass import BaseClass
 from Utilities.Expected import expect
 from Tests.test_shop_page import TestShopPage
-import time
+
 class TestHomePage(BaseClass):
-    #@pytest.mark.xfail
+
     def testHomepageform(self, setup):
         driver = setup
         driver.get("https://rahulshettyacademy.com/angularpractice/")

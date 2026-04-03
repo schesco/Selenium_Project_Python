@@ -3,7 +3,6 @@ from Pages.rahulshettyacademy_final_tabs import PurchasePage
 from Utilities.BaseClass import BaseClass
 
 class TestPurchasePage(BaseClass):
-    #@pytest.mark.xfail
     def testPurchase(self, setup):
         driver = setup
 
