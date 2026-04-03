@@ -1,5 +1,5 @@
 from time import sleep
-from SeleniumReview_Pom_structure.Tests.test_PurchasePage import TestPurchasePage
+from SeleniumReview_Pom_structure.Tests.test_purchase_page import TestPurchasePage
 from SeleniumReview_Pom_structure.Pages.rahulshettyacademy_angular_confirm import ConfirmPage
 from SeleniumReview_Pom_structure.Utilities.BaseClass import BaseClass
 
