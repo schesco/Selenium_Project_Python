@@ -10,12 +10,12 @@ jobs:
   test:
     runs-on: ubuntu-latest
 
-    env:
-      PYTHONPATH: ${{ github.workspace }}/Selenium_Project_Python
-
     steps:
       - name: Checkout Code
         uses: actions/checkout@v3
+
+      - name: Add project to PYTHONPATH
+        run: echo "PYTHONPATH=$PYTHONPATH:$(pwd)" >> $GITHUB_ENV
 
       - name: Setup Python
         uses: actions/setup-python@v4
@@ -30,5 +30,5 @@ jobs:
       - name: Install Chrome
         uses: browser-actions/setup-chrome@v1
 
-      - name: Run Tests
+      - name: Run only homepage form test
         run: pytest Tests/test_homepage_form.py -v
